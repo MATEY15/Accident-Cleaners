@@ -1,4 +1,14 @@
-+b.HEADER(style="background: url(img/header-img1-1.jpg)").header_
++b.HEADER(style="background: #9cc5e7 url(img/header-bg.jpg)").header_
 	
 	include top-line
-	include header-content
+
+	.container-head.flex-contain
+		.form-wrapper
+			form
+				.section-form
+					input(placeholder="Имя Фамилия")
+				.section-form
+					input(placeholder="example@yandex.ru")
+				.section-form
+					textarea(placeholder="Доп. информ.")
+				button(type="submit").form-button оставить заявку

@@ -1,0 +1,73 @@
+.left-menu
+	position absolute
+	top 0
+	left 0
+	width 80px
+	height 100%
+	background: #fe5e31
+	padding-top 94px
+	@media screen and (max-width: 600px)
+		display none
+
+.navigation__left-menu
+	position relative
+	li
+		position relative
+	.link-menu
+		position relative
+		display flex
+		height 64px
+		align-items center
+		justify-content center
+		text-decoration none
+		background: #fe5e31
+		z-index 5
+		
+		svg
+			fill White
+			trn(.25s)
+		
+		.icon-file
+			width 30px
+			height 37px
+		
+		.icon-car
+			width 43px
+			height 25px
+		
+		.icon-procent
+			width 25px
+			height 26px
+		
+		.icon-user
+			width 36px
+			height 35px
+	
+	.sub-menu
+		position absolute
+		left -160px
+		top 0
+		min-height 64px
+		min-width 160px
+		background: #fe5e31
+		trn(.3s)
+		li
+			padding 14px
+			a
+				font-size 18px
+				c White
+				trn(.25s)
+	li
+		a
+			display block
+			text-decoration none
+	
+	li:hover
+		.sub-menu
+			left 100%
+		svg
+			fill #f9d439
+		.sub-menu
+			li a
+				c #f9d439
+			

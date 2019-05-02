@@ -10,18 +10,157 @@ block prepend main
 		path.shape-overlays__path
 		path.shape-overlays__path
 
+	.left-menu
+		nav.navigation__left-menu
+			ul
+				li
+					a(href="#").link-menu
+						+e.SVG._icon.icon--svg.icon-file
+							USE(xlink:href="img/sprite.svg#icon-file")
+					.sub-menu
+						ul
+							li
+								a(href="#") восстановление навыков
+				li
+					a(href="#").link-menu
+						+e.SVG._icon.icon--svg.icon-car
+							USE(xlink:href="img/sprite.svg#icon-car")
+					.sub-menu
+						ul
+							li
+								a(href="#") восстановление навыков
+				li
+					a(href="#").link-menu
+						+e.SVG._icon.icon--svg.icon-procent
+							USE(xlink:href="img/sprite.svg#icon-procent")
+					.sub-menu
+						ul
+							li
+								a(href="#") восстановление навыков
+				li
+					a(href="#").link-menu
+						+e.SVG._icon.icon--svg.icon-user
+							USE(xlink:href="img/sprite.svg#icon-user")
+					.sub-menu
+						ul
+							li
+								a(href="#") восстановление навыков
+
 	+b.MAIN.section_main
-		include include/motion-capture
-		include include/section-device
-		include include/section-description
-		include include/section-news
-		include include/section-start
-		//- include include/footer
-		//- +b.SECTION.new-section
-		//- 	| Main
-		//- a.button--call#create-cup-open
-		//- 	| Button
-		//- +e.SVG._icon.icon--svg.circle-svg
-		//- 	USE(xlink:href="/img/sprite.svg#icon-circle")
-		//- +e.SVG._icon.icon--svg.circle-svg
-		//- 	USE(xlink:href="/img/sprite.svg#icon-people1")
+		include include/slider1
+
+		section.advantage
+			.container
+				h3.heading Наши преимущества
+				.advantage-wrapper
+					.advantage-item
+						.advantage--img
+							img(src="img/advantage1.png", alt="")
+						.advantage--text
+							h4 Большой автопарк
+							p
+								| Вы сможете подобрать
+								br
+								| автомобиль себе по вкусу
+					.advantage-item
+						.advantage--img
+							img(src="img/advantage2.png", alt="")
+						.advantage--text
+							h4 Опыт
+							p
+								| Занятия ведут проверенные
+								br
+								| специалисты в своей области
+					.advantage-item
+						.advantage--img
+							img(src="img/advantage3.png", alt="")
+						.advantage--text
+							h4 Техническое оснащение
+							p
+								| Наша техническая база вас
+								br
+								| не разочарует!
+					.advantage-item
+						.advantage--img
+							img(src="img/advantage4.png", alt="")
+						.advantage--text
+							h4 Мы открыты к диалогу
+							p
+								| Наши специалисты помогут
+								br
+								| вам во всём разобраться
+					.advantage-item
+						.advantage--img
+							img(src="img/advantage5.png", alt="")
+						.advantage--text
+							h4 Эффективная программа
+							p
+								| Идеальное соотношение
+								br
+								| теории и практики на курсе
+					.advantage-item
+						.advantage--img
+							img(src="img/advantage6.png", alt="")
+						.advantage--text
+							h4 Качество
+							p
+								| О нашем качестве лучше всего
+								br
+								| говорят отзывы учеников
+
+		include include/slider2
+
+		section.gallery
+			.container-head
+				h3.heading Галерея
+				.gallery-wrapper
+					.gallery-items
+						.gallery-items__img
+							img(src="img/gallery/gellery1.jpg", alt="")
+					.gallery-items
+						.gallery-items__img
+							img(src="img/gallery/gellery2.jpg", alt="")
+					.gallery-items
+						.gallery-items__img
+							img(src="img/gallery/gellery3.jpg", alt="")
+					.gallery-items.big-gallery
+						.gallery-items__img
+							img(src="img/gallery/gellery4.jpg", alt="")
+					.gallery-items
+						.gallery-items__img
+							img(src="img/gallery/gellery5.jpg", alt="")
+
+		include include/contact
+		
+		section.content-stop
+			.container-stop
+				.wrapper-stop
+					.wrapper-stop__img
+						img(src="img/stop.png", alt="")
+					.wrapper-stop__text
+						h3.heading Какой-то текст
+						.height-38
+						p
+							| Постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки соответствующий условий активизации. Товарищи! дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Не следует, однако забывать, что укрепление и развитие структуры способствует подготовки и реализации систем массового участия. Значимость этих проблем настолько очевидна, что сложившаяся структура организации требуют определения и уточнения модели развития.
+						h4
+							| Подзаголовок
+						p
+							| Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+						a(href="#") ссылка подробнее
+
+		section.form-send
+			.container-form
+				h3.heading Оставить заявку
+				form
+					.section-form
+						input(placeholder="Имя Фамилия")
+					.section-form
+						input(placeholder="example@yandex.ru")
+					.section-form
+						textarea(placeholder="Доп. информ.")
+					button(type="submit").form-button оставить заявку
+
+			.thank-wrapper
+				img(src="img/thank-icon.png", alt="")
+				h4 Ваша заявка принята
+				p с вами свяжется администратор

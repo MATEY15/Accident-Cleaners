@@ -1,22 +1,45 @@
 +b.SECTION.top-line
-	.container
+	.container-head
 		.flex-wrapper
 			+b.DIV.logo-top_
 				+e.A(href="index.html").__link
-					+e.IMG.__img(src="img/logo.png", alt="Logo Activtrack")
-					+e.SPAN.__name Activtrack
+					| Альтернатива
 			+b.menu-header
 				+b.NAV.nav-top_
 					+e.UL.__list
 						+e.LI.__list-li
-							a(href="spine-track.html") Spine
+							a(href="#") о школе
+							+e.DIV.__sub-menu
+								ul
+									li
+										a(href="#") о нас
+									li
+										a(href="#") филиалы
+									li
+										a(href="#") автопарк
+									li
+										a(href="#") виды обучения
+									li
+										a(href="#") стоимость обучения
+									li
+										a(href="#") расписание занятий
+									li
+										a(href="#") инструкторы
 						+e.LI.__list-li
-							a(href="#") Products
+							a(href="#") акции
 						+e.LI.__list-li
-							a(href="blog-page.html") Blog
+							a(href="#") онлайн-обучение
 						+e.LI.__list-li
-							a(href="#") Contact Us
-			.burger-menu
-				span
-				span
-				span
+							a(href="#") запись онлайн
+						+e.LI.__list-li
+							a(href="#") контакты
+						+e.LI.__list-li
+							a(href="#popup-thank").popup отзывы
+			.phone-head
+				.phone-head__wrapper
+					a(href="tel:+78124047000").phone-number +7 (812) 404-7000
+					a(href="#popup-send").popup заказать звонок
+				.burger-menu
+					span
+					span
+					span

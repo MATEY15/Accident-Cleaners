@@ -11,13 +11,21 @@
 
 html
 	// background: cBlack
+	height 100%
 
 body
 	overflow-x: hidden
 	min-width 320px
-	background: cWhite
+	background: White
+	position relative
+	min-height 100%
 	&.overflow
 		overflow hidden
+
+main
+	padding-left 80px
+	@media screen and (max-width: 600px)
+		padding-left 0
 
 #overlayer
 	width 100%
@@ -26,24 +34,34 @@ body
 	top 0
 	left 0
 	z-index 11
-	background cBlack
+	background #3d414e
 
 .align-right
 	float right
 .align-left
 	float left
 
+.heading
+	text-align center
+
 h1, h2, h3, h4, h5, h6
-	font-family: fPoppinsSemiBold
+	font-family: ProximaNova-Bold
+
+p
+	font-size 15px
+	c #3d414e
+
+a
+	c #fe5e31
 
 h1
-	font-size 32px
+	// font-size 32px
 h2
-	font-size 28px
+	// font-size 28px
 h3
-	font-size 26px
+	font-size 30px
 h4
-	font-size 22px
+	font-size 20px
 h5
 	font-size 18px
 h6
@@ -51,7 +69,7 @@ h6
 
 .container
 	box-sizing border-box
-	max-width 1160px
+	max-width 1020px
 	width 100%
 	padding-left 10px
 	padding-right 10px
@@ -59,13 +77,65 @@ h6
 	@media screen and (max-width: 640px)
 		padding-left 20px
 		padding-right 20px
-	
-.heading-h2
-	color cBlack
-	font-family: fPoppinsSemiBold
-	font-size 32px
-	text-align center
-	@media screen and (max-width: 640px)
-		font-size 28px
-		br
+
+.container-head
+	box-sizing border-box
+	max-width 1150px
+	width 100%
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+
+.container-stop
+	box-sizing border-box
+	max-width 600px
+	width 100%
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+
+.container-full
+	box-sizing border-box
+	max-width 1200px
+	width 100%
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+
+.container-form
+	box-sizing border-box
+	max-width 560px
+	width 100%
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+
+.height-38
+	height 38px
+
+.content-stop
+	padding-top 54px
+	padding-bottom 40px
+
+.wrapper-stop
+	display flex
+	flex-direction row
+	.wrapper-stop__img
+		padding-top 40px
+		margin-right 50px
+		@media screen and (max-width: 480px)
+			margin-right 26px
+		@media screen and (max-width: 414px)
 			display none
+	h4
+		margin-bottom 16px
+		text-align center
+	p
+		margin-bottom 16px
+	a
+		font-size 18px
+		ffa(ProximaNova-Bold)
+		text-decoration none
+
+textarea
+	resize: none

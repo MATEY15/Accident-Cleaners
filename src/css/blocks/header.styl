@@ -1,33 +1,28 @@
-headerRowWidth = 775px // variable
+headerRowWidth = 94px // variable
 
 .header
-	padding-top 32px
 	position relative
-	height: headerRowWidth
-	background-size cover !important
-	background-position center 0 !important
+	// background-size cover !important
+	background-position center bottom !important
 	background-repeat no-repeat !important
-	// background rgb(49,88,211)
-	// background -moz-linear-gradient(top, rgba(49,88,211,1) 0%, rgba(80,119,241,1) 100%)
-	// background -webkit-linear-gradient(top, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
-	// background linear-gradient(to bottom, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
-	@media screen and (max-width: 720px)
-		padding-top 20px
+	min-height 465px
 	section
 		position relative
 		@media screen and (max-width: 720px)
 			position initial
-	@media screen and (max-width: 600px)
-		height 667px
 	
 	.top-line
 		position relative
 		z-index 10
+		background: #3d414e
+		c cWhite
+		min-height headerRowWidth
 	
 	.flex-wrapper
 		display flex
 		justify-content space-between
 		align-items center
+		min-height headerRowWidth
 
 .bg-header
 	position absolute
@@ -42,24 +37,46 @@ headerRowWidth = 775px // variable
 
 .logo-top
 	&__link
-		display inline-block
+		color: White
+		font-family: ProximaNova-Black
+		font-size: 30px
 		text-decoration none
-		font-family: fPoppinsBold
-		font-size 21px
-	&__img
-		margin-right 19px
-	&__name
+		@media screen and (max-width: 1030px)
+			font-size 26px
+
+.phone-head
+	display flex
+	flex-direction row
+	align-items center
+	text-align right
+	&__wrapper
+		display flex
+		flex-direction column
+		text-align right
+		@media screen and (max-width: 450px)
+			display none
+	a
+		fz(21px)
+		ffa(ProximaNova-Regular)
+		c White
+		text-decoration none
 		display inline-block
-		vertical-align top
-		margin-top 15px
-		color cWhite
+	.phone-number
+		font-size 24px
+		font-family: ProximaNova-Bold
+		margin-bottom 6px
+		@media screen and (max-width: 1030px)
+			font-size 22px
 
 .menu-header
+	@media screen and (max-width: 992px)
+		// padding-top 70px
 	&.is-active
-		visibility visible
-		opacity 1
-		transition all .25s ease-out
-	@media screen and (max-width: 720px)
+		display flex
+		// visibility visible
+		// opacity 1
+		// transition all .25s ease-out
+	@media screen and (max-width: 992px)
 		position fixed
 		top 0
 		left 0
@@ -68,32 +85,83 @@ headerRowWidth = 775px // variable
 		justify-content center
 		width 100%
 		height 100%
-		background rgb(49,88,211)
-		background -moz-linear-gradient(top, rgba(49,88,211,1) 0%, rgba(80,119,241,1) 100%)
-		background -webkit-linear-gradient(top, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
-		background linear-gradient(to bottom, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
-		visibility hidden
-		opacity 0
+		background #9dc5e8
+		display none
+		// visibility hidden
+		// opacity 0
 		
 	.nav-top
+		padding-top 4px
 		&__list
 			text-align right
-			@media screen and (max-width: 720px)
+			position relative
+			@media screen and (max-width: 992px)
 				text-align center
+		
+		&__sub-menu
+			position absolute
+			left -14px
+			top calc(100% + 20px)
+			padding-top 35px
+			text-align: left
+			min-width 240px
+			opacity 0
+			visibility hidden
+			trn(.2s)
+			li
+				a
+					@media screen and (max-width: 992px)
+						font-size 18px
+						c #54565d
+						
+			@media screen and (max-width: 992px)
+				position relative
+				padding-top 0
+				opacity 1
+				visibility visible
+				left 0
+			
+			ul
+				padding 12px 14px 16px
+				background: rgba(102, 107, 125, 0.9)
+				@media screen and (max-width: 992px)
+					background none
+					text-align center
+					padding-bottom 10px
+				li
+					&:not(:last-child)
+						margin-bottom 6px
+
 		&__list-li
 			display inline-block
+			@media screen and (max-width: 992px)
+				display block
+			
+			&:hover
+				.nav-top__sub-menu
+					top 100%
+					opacity 1
+					visibility visible
 			&:not(:last-child)
-				margin-right 54px
-				@media screen and (max-width: 720px)
+				margin-right 24px
+				@media screen and (max-width: 1120px)
+					margin-right 12px
+				@media screen and (max-width: 992px)
 					margin-right 0
-					display block
-					margin-bottom 30px
+					margin-bottom 8px
 			a
-				color: cWhite
-				font-size 15px
+				color: White
+				font-family: ProximaNova-Regular
+				font-size: 18px
 				text-decoration none
-				@media screen and (max-width: 720px)
-					font-size 25px
+				trn(.25s)
+				&:hover
+					c #a0c7e7
+					@media screen and (max-width: 992px)
+						c #3d414e
+				@media screen and (max-width: 992px)
+					font-size 22px
+					c #3d414e
 					
 
 .burger-menu
@@ -103,7 +171,8 @@ headerRowWidth = 775px // variable
 	width 22px
 	height 16px
 	outline none
-	@media screen and (max-width: 720px)
+	margin-left 40px
+	@media screen and (max-width: 992px)
 		display block
 		z-index 10
 	span
@@ -133,68 +202,70 @@ headerRowWidth = 775px // variable
 		margin-bottom 12px
 		@media screen and (max-width: 600px)
 			font-size 40px
-		@media screen and (max-width: 720px)
-			br
-				display none
-		@media screen and (max-width: 500px)
-			br
-				display none
-		@media screen and (max-width: 480px)
-			max-width 355px
-		@media screen and (max-width: 320px)
-			font-size 30px
+
 	&__paragraph
 		font-size 18px
 		line-height 26px
 		margin-bottom 25px
 		@media screen and (max-width: 600px)
 			font-size 15px
-		@media screen and (max-width: 414px)
-			br
-				display none
 
-.header-blog
-	position relative
-	height 100%
+.flex-contain
+	display flex
+	flex-direction row
+	justify-content flex-end
 	@media screen and (max-width: 600px)
-		height 98%
-	&:before
-		position absolute
-		top 0
-		left 0
-		content ''
-		display block
-		width 100%
-		height 500px
-		background rgb(49,88,211)
-		background -moz-linear-gradient(top, rgba(49,88,211,1) 0%, rgba(80,119,241,1) 100%)
-		background -webkit-linear-gradient(top, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
-		background linear-gradient(to bottom, rgba(49,88,211,1) 0%,rgba(80,119,241,1) 100%)
-		@media screen and (max-width: 600px)
-			height 98%
-	img
-		position relative
-		max-width 100%
-	.images-blog
-		position relative
-		height 550px
-		width 100%
-		max-width 1140px
-		overflow hidden
-		margin 100px auto 0
-		@media screen and (max-width: 600px)
-			margin-top 16px
-			height 480px
-		.container
-			@media screen and (max-width: 600px)
-				padding-left 0
-				padding-right 0
-			img
-				position absolute
-				top 50%
-				left 50%
-				height 100%
-				width auto
-				max-width none
-				transform translate(-50%, -50%)
-				font-size 0
+		justify-content center
+
+.form-wrapper
+	margin-top 32px
+	width 264px
+	background: #dcdee3
+	padding-top 22px
+	box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.63)
+	.section-form
+		padding 0 20px
+		input,
+		textarea
+			font-size 15px
+			c #c7c7c7
+			background: #fdfaf3
+			width 100%
+		input
+			height 40px
+			padding 0 12px
+			margin-bottom 13px
+		textarea
+			height 98px
+			padding 9px 12px
+	.form-button
+		width 268px
+		margin-left -2px
+		margin-top 20px
+
+.section-form input::-webkit-input-placeholder {color:#c7c7c7;}
+.section-form input::-moz-placeholder          {color:#c7c7c7;}
+.section-form input:-moz-placeholder           {color:#c7c7c7;}
+.section-form input:-ms-input-placeholder      {color:#c7c7c7;}
+
+.section-form textarea::-webkit-input-placeholder {color:#c7c7c7;}
+.section-form textarea::-moz-placeholder          {color:#c7c7c7;}
+.section-form textarea:-moz-placeholder           {color:#c7c7c7;}
+.section-form textarea:-ms-input-placeholder      {color:#c7c7c7;}
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}

@@ -1,17 +1,45 @@
 +b.FOOTER.footer
-	.container.flex-wrapper
-		.footer-left
+	.container-footer
+		.footer-logo
 			+b.DIV.logo-foot_
 				+e.A(href="#").__link
-					+e.IMG.__img(src="img/logo-footer.png", alt="Logo Footer Activtrack")
-			+b.NAV.nav-footer_
-				+e.UL.__list
-					+e.LI.__list-li
-						a(href="#") Products
-					+e.LI.__list-li
-						a(href="#") Blog
-					+e.LI.__list-li
-						a(href="#") Contact Us
-		.copyright
-			p
-				| © 2019 ActiveTrack
+					| Альтернатива
+		.footer-foot
+			.footer-foot__items
+				nav.small-menu
+					ul
+						li
+							a(href="#") о нас
+						li
+							a(href="#") филиалы
+						li
+							a(href="#") автопарк
+						li
+							a(href="#") виды обучения
+						li
+							a(href="#") стоимость обучения
+						li
+							a(href="#") расписание занятий
+						li
+							a(href="#") инструкторы
+
+			.footer-foot__items
+				nav.menu-big
+					ul
+						li
+							a(href="#") запись онлайн
+						li
+							a(href="#") контакты
+						li
+							a(href="#") отзывы
+
+			.footer-foot__items
+				nav.menu-big
+					ul
+						li
+							a(href="#") акции
+						li
+							a(href="#") онлайн-обучение
+
+			.footer-foot__items
+				a(href="tel:+78124047000").phone-footer +7 (812) 404-7000
